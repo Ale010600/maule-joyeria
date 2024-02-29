@@ -1,0 +1,205 @@
+/* ESTILO GLOBAL DEL NAVEGADOR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* IMAGEN DE FONDO, TAMAÑO DE TEXTO "MENU", TIPO DE LETRA MENU  */
+body {
+    background-color: #f3e8c5;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23f789f2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+}
+
+/* COLOR DE LAS LETRAS "MENU" */
+ a {
+    color:#886f63;
+    text-decoration: none;
+ }
+
+ /* QUITAR ESTILOS POR DEFECTO DE LOS UL*/
+ ul {
+    list-style: none;
+ }
+
+/* ORGANIZADOR DE CONTENIDO */
+ .contenedor { 
+    width: 90%;
+    margin: auto;
+}
+
+/* MODIFICACION DE NAVEGACION */
+.menu-nav {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ /* ALINEAMIENTO DE MENU */
+.menu-nav ul {
+    display: flex;
+}
+
+/* TAMAÑO DE SEPARACION MENU*/
+.menu-nav ul li { 
+    padding: 50px;
+}
+
+/* LINEA DE MENU (CURSOR) */
+.menu-nav ul li a:hover {
+    border-bottom: 5px solid #886f63;
+}
+
+/* CARRUSEL DE IMAGENES */
+.carrusel {
+    width: 1280px;
+    height: auto;
+    margin: -50px auto 50px;
+    overflow: hidden;
+}
+
+.carrusel ul {
+    display: flex;
+    padding: 0;
+    width: 800%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.carrusel li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.carrusel img { 
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    8% {margin-left: 0;}
+
+    13% {margin-left: -100%;}
+    21% {margin-left: -100%;}
+
+    26% {margin-left: -200%;}
+    34% {margin-left: -200%;}
+
+    39% {margin-left: -300%;}
+    47% {margin-left: -300%;}
+
+    52% {margin-left: -400%;}
+    60% {margin-left: -400%;}
+
+    65% {margin-left: -500%;}
+    73% {margin-left: -500%;}
+
+    78% {margin-left: -600%;}
+    86% {margin-left: -600%;}
+
+    91% {margin-left: -700%;}
+    100% {margin-left: -700%;}
+}
+
+@media(max-width:991px) {
+    body {
+        padding:30%
+    }
+    .carrusel {
+        width: 100%;
+    }
+}
+
+/* PROPIEDADES PARA CONTENIDO */
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.contenido img { 
+    width: 100%;
+    height: 300px;
+}
+
+.contenido h3 {
+    text-align: center;
+    font-size: 35px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.contenido p {
+    text-align: justify;
+}
+
+.contenido a {
+    font-size: 25px; 
+    padding: 10px 0;
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.contenido a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENIDO DE PIE DE PAGINA*/
+.piebanner {
+    width: 100%;
+    height: 400px;
+    background: url('./imagenes/pie_banner.jpg');
+    margin-bottom: 40px;
+}
+
+.piebanner .content {
+    width: 60%;
+    padding: 120px 0 0 30px;
+    color: black;
+}
+
+/* CONTENIDO DE HEADBANNER*/
+.headbanner {
+    width: 100%;
+    height: 400px;
+    background: url('./imagenes/headbanner.jpg');
+    margin-bottom: 40px;
+}
+
+.headbanner .content {
+    width: 60%;
+    padding: 120px 0 0 30px;
+    color: black;
+}
+
+/* SOCIAL */
+
+.social {
+    margin: 50px
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 5rem;
+}
+
